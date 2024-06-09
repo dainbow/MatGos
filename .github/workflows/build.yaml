@@ -22,6 +22,11 @@ jobs:
           name: PDF
           path: main.pdf
 
+      - name: Create PDF
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: main.pdf
+
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
