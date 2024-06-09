@@ -1,5 +1,5 @@
 name: Build Typst document
-on: push
+on: [push, workflow_dispatch]
 
 permissions:
   contents: write
@@ -22,12 +22,9 @@ jobs:
           name: PDF
           path: main.pdf
 
-      - name: Get current date
-        id: date
-        run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
-
       - name: Release
         uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
-          name: "Compiled PDF ${{ env.DATE }}"
+          name: "${{ github.ref_name }}"
           files: main.pdf
