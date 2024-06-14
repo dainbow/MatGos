@@ -6,6 +6,7 @@
 
 #let theorem = thmbox("theorem", "Теорема", fill: rgb("#eeffee"))
 #let proposition = thmbox("proposition", "Утверждение", fill: rgb("#eeffee"))
+#let lemma = thmbox("lemma", "Лемма", fill: rgb("#eeffee"))
 
 #let corollary = thmplain("corollary", "Следствие", base: "theorem", titlefmt: strong)
 #let definition = thmbox("definition", "Определение", inset: (x: 1.2em, top: 1em))
