@@ -23,6 +23,16 @@
 
 #let weak = $overset(->, w)$
 
+#let epigraph(phrase, author) = align(right)[
+  #text(font: "DejaVu Sans Mono")[
+    #phrase
+  ]
+  #line()
+  #text(style: "italic")[
+    #author
+  ]
+]
+
 #let conf(title, doc) = {
   set page(paper: "a4", numbering: "1", header: align(right + horizon, title))
   set par(leading: 0.55em, first-line-indent: 1.8em, justify: true)
