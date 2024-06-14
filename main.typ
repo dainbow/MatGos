@@ -20,4 +20,6 @@
 #include "themes/4.typ"
 #include "themes/5.typ"
 #include "themes/6.typ"
+#include "themes/7.typ"
+#include "themes/8.typ"
 
