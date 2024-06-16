@@ -20,6 +20,8 @@
 // TODO: Свойства пределов, предельные переходы
 // TODO: Окрестность, область
 // TODO: Диффеоморфизм
+// TODO: Ограниченная вариация
+// TODO: Каждая монотонная функция интегрируема по Риману, теоремы о среднем для интеграла Римана
 
 #include "themes/1.typ"
 #include "themes/2.typ"
@@ -39,3 +41,4 @@
 #include "themes/16.typ"
 #include "themes/17.typ"
 #include "themes/18.typ"
+#include "themes/19.typ"
