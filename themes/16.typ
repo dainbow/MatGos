@@ -49,8 +49,12 @@
 ]
 
 #definition[
+  *Клеткой* называется диффеоморфный образ куба
+]
+
+#definition[
   Для формы $Omega$ и диффеоморфизма $phi: U -> V$, $M subset U$ -- клетки, $K subset V$ -- куба:
   #eq[
-    $integral_M Omega = integral K phi^* Omega$
+    $integral_M Omega = integral_K phi^* Omega$
   ]
 ]
