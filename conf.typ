@@ -23,6 +23,8 @@
 
 #let weak = $overset(->, w)$
 
+#let res = $op("res")$
+
 #let epigraph(phrase, author) = align(right)[
   #text(font: "DejaVu Sans Mono")[
     #phrase
