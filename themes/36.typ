@@ -1,28 +1,29 @@
 #import "../conf.typ": *
 = Интегральная формула Коши. Разложение функции регулярной в окрестности точки в ряд Тейлора.
 
-== Интегральная формула Коши. 
+== Интегральная формула Коши.
 //TODO: Поправить названия теорем. Что такое формула и что такое теорема
 Пункт 1 в интегральной теореме Коши (???)
 
 == Разложение функции регулярной в окрестности точки в ряд Тейлора.
 
 #theorem[
-Пусть $f$ - голоморфная в $D$, $O_R(a) subset D$, тогда
-#eq[$forall z in O_R(a): f(z) = sum_(n=0)^(infinity) c_n (z-a)^n, space c_n = f^((n))(a) / n! $]
+  Пусть $f$ - голоморфная в $D$, $O_R(a) subset D$, тогда
+  #eq[$forall z in O_R(a): f(z) = sum_(n=0)^(infinity) c_n (z-a)^n, space c_n = f^((n))(a) / n! $]
 ]
 
 #proof[
-  Возьмем $0 < r < R$, тогда $f$ голоморфна в $overline(O_r(a))$. Тогда по теореме Коши
+  Возьмем $0 < r < R$, тогда $f$ голоморфна в $overline(O_r(a))$. Тогда по теореме
+  Коши
   $2 pi i space f(z) = integral_(gamma_r) (f(xi) d xi) / (xi - z)$.
 
-  Распишем #eq[$1 / (xi - z) = 1 / ((xi - a) - (z - a)) = 1 / ((xi - a)) dot.op 1 / (1 - (z - a) / (xi - a))  =^((|z-a| < |xi - a|)) = 1 / (xi - a) sum^infinity ((z-a)/(xi-a))^n = sum^infinity (z-a)^n/(xi-a)^(n+1)$]
+  Распишем #eq[$1 / (xi - z) = 1 / ((xi - a) - (z - a)) = 1 / ((xi - a)) dot.op 1 / (1 - (z - a) / (xi - a)) =^((|z-a| < |xi - a|)) = 1 / (xi - a) sum^infinity ((z-a)/(xi-a))^n = sum^infinity (z-a)^n/(xi-a)^(n+1)$]
 
-  Полученный ряд сходится равномерно, а значит можно почленно интегрировать. 
+  Полученный ряд сходится равномерно, а значит можно почленно интегрировать.
 
-  $2 pi i space f(z) = integral_(gamma_r) f(xi) / xi = sum^infinity integral (f(xi))/(xi-a)^(n+1) (z-a)^n =  sum_(n=0)^(infinity) 2 pi i c_n (z-a)^n$
-  
+  $2 pi i space f(z) = integral_(gamma_r) f(xi) / xi = sum^infinity integral (f(xi))/(xi-a)^(n+1) (z-a)^n = sum_(n=0)^(infinity) 2 pi i c_n (z-a)^n$
+
   Причем по следтвию формулы Коши для круга, $2 pi i dot.op c_n = f^((n)) / n!$
 
-  Ну раз верно для любого $r < R$, то и для $R$ верно. 
+  Ну раз верно для любого $r < R$, то и для $R$ верно.
 ]
