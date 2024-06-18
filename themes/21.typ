@@ -150,7 +150,7 @@
 ]
 
 #definition[
-  Пусть $l subset P_3$ -- прямая с напрвляющим вектором $bold(a)$, и пусть $M in l, bold(r_0) := overline(O M)$.
+  Пусть $l subset P_3$ -- прямая с направляющим вектором $bold(a)$, и пусть $M in l, bold(r_0) := overline(O M)$.
   *Векторным* уравнением прямой называется следующее уравнение:
   #eq[
     $[bold(r) - bold(r_0), bold(a)] = bold(0)$
