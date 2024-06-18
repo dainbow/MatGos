@@ -16,7 +16,6 @@
 
 #epigraph("Экзамен - это тропа", "Коновалов Сергей Петрович")
 
-// TODO: Действительные числа, аксиоматика
 // TODO: Свойства пределов, предельные переходы
 // TODO: Окрестность, область
 // TODO: Диффеоморфизм
@@ -59,3 +58,5 @@
 #include "themes/36.typ"
 #include "themes/37.typ"
 #include "themes/38.typ"
+
+#include "themes/definition.typ"
