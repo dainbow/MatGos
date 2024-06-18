@@ -52,6 +52,7 @@
 #include "themes/26.typ"
 #include "themes/27.typ"
 #include "themes/28.typ"
+#include "themes/29.typ"
 
 //TODO(mishaglik): Различие между интегральной теоремой и интегральной формулой Коши.
 //TODO(mishaglik): ИОТОХ, вычеты для infinity
