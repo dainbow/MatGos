@@ -33,7 +33,7 @@
   ]
   то
   #eq[
-    $forall x in U_delta (x_0) : exists xi in (x_0, x) : space (phi(x)) / (psi(x)) = (phi^((n + 1))(xi)) / (psi^((n + 1))(xi))$
+    $forall x in dot(U)_delta (x_0) : exists xi in (x_0, x) : space (phi(x)) / (psi(x)) = (phi^((n + 1))(xi)) / (psi^((n + 1))(xi))$
   ]
 ]
 
@@ -64,7 +64,9 @@
 == Остаточный член в форме Пеано
 
 #definition[
-  Пусть функции $f(x), g(x)$ определены на множестве $X$. Тогда $f(x)$ есть *о-малое* от $g(x)$ при $x -> x_0$, если
+  Пусть функции $f(x), g(x)$ определены на множестве $X$. 
+  
+  Тогда $f(x)$ есть *о-малое* от $g(x)$ при $x -> x_0$, если
   существует окрестность $dot(U)(x_0)$ такая, что
   #eq[
     $forall x in dot(U)(x_0) : f(x) = g(x) alpha(x)$,
