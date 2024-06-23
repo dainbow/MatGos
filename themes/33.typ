@@ -14,7 +14,7 @@
   #eq[
     $\
     EE xi = EE (xi II(xi >= a) + xi II(xi < a)) = EE(xi II(xi >= a) + EE(xi II(xi < a))) >= \
-    EE (xi II(xi >= a)) >= a EE (II (xi >= A)) = a P(xi >= a)$
+    EE (xi II(xi >= a)) >= a EE (II (xi >= a)) = a P(xi >= a)$
   ]
 ]
 
