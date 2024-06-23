@@ -49,18 +49,18 @@
 ]
 
 #proof[
-  Воспользуемся $n$ раз "умным нулём", каждый из которых будет снимать приращение
-  по одной из координат:
+  Воспользуемся $n$ раз "умным нулём", каждый из которых будет "снимать"
+  приращение по одной из координат:
   #eq[
     $Delta f(x_0) = \
     f(x_(0, 1) + Delta x_1, ..., x_(0, n) + Delta x_n) - f(x_(0, 1) + Delta x_1, ..., x_(0, n - 1) + Delta x_(n - 1), x_(0, n)) + \
     f(x_(0, 1) + Delta x_1, ..., x_(0, n - 1) + Delta x_(n - 1), x_(0, n)) -
     f(x_(0, 1) + Delta x_1, ..., x_(0, n - 1), x_(0, n)) \ + ... +\
-    f(x_(0, 1) + Delta x_1, x_(0, 2), ..., x_(0, n)) - f(x_(0, 1), ..., x_(0,n )) = \
+    f(x_(0, 1) + Delta x_1, x_(0, 2), ..., x_(0, n)) - f(x_(0, 1), ..., x_(0,n )) attach(=, t: "т. Лагранжа") \
     (partial f) / (partial x_n) (x_(0, 1) + Delta x_1, ..., x_(0, n - 1) + Delta x_(n - 1), xi_n) Delta x_n + \
     (partial f) / (partial x_(n - 1)) (x_(0, 1) + Delta x_1, ..., x_(0, n - 2) + Delta x_(n - 2), xi_(n - 1), x_(0, n))Delta x_(n - 1) \
     + ... + \
-    + (partial f) / (partial x_1) (xi_1, x_(0, 2), ..., x_(0, n)) Delta x_1 = \
+    + (partial f) / (partial x_1) (xi_1, x_(0, 2), ..., x_(0, n)) Delta x_1 attach(=, t: Delta x -> 0 => forall n : xi_n -> 0) \
     sum_(i = 1)^n (partial f) / (partial x_i)(x_0) Delta x_i + o(norm(Delta x)), Delta x -> 0$
   ]
 ]

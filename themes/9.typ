@@ -17,7 +17,7 @@
   Тогда для любого достаточно малого $epsilon > 0$ найдётся $delta > 0$:
   #eq[
     $forall x in K_(delta, x_0) : exists ! y = phi(x) : forall (x, y) in K_(delta, x_0) times (y_0 - epsilon, y_0 + epsilon) : \
-    F(x, y) = 0 <=> y = phi(x) and exists phi'(x_0)$
+    F(x, y) = 0 <=> y = phi(x), "причём" exists phi'(x_0)$
   ]
 ]
 
@@ -45,7 +45,7 @@
 
   Теперь докажем дифференцируемость $phi$, для этого распишем дифференцируемость $F$:
   #eq[
-    $F(x, y) - underbrace(F(x_0, y_0), 0) = sum_(k = 1)^n (partial F) / (partial x_k) (x_0, y_0)dot (x_k - x_0^k) + (partial F) / (partial y) (x_0, y_0) dot (y - y_0) + alpha(x, y)$
+    $F(x, y) - underbrace(F(x_0, y_0), 0) = \ sum_(k = 1)^n (partial F) / (partial x_k) (x_0, y_0)dot (x_k - x_0^k) + (partial F) / (partial y) (x_0, y_0) dot (y - y_0) + alpha(x, y)$
   ]
   где $alpha = o(norm((x, y) - (x_0, y_0))), (x, y) -> (x_0, y_0)$.
 

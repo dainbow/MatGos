@@ -1,6 +1,13 @@
 #import "../conf.typ": *
 
 = Теорема о равномерной непрерывности функции, непрерывной на компакте
+#definition[
+  *Метрическим пространством* $(X, rho)$ называется множество $X$ такое, что на $X times X$ определена
+  числовая функция $rho: X times X -> RR$ такая что:
+  + $rho(x, y) >= 0$, причём $rho(x, y) = 0 <=> x = y$
+  + $rho(x, y) = rho(y, x)$
+  + $forall x, y, z in X : space rho(x, z) <= rho(x, y) + rho(y, z)$
+]
 
 #definition[
   *Компактным* множеством в метрическом пространстве $X$ называется такое
@@ -65,7 +72,7 @@
 ]
 
 #theorem[
-  Множество $E$ является компактным в $RR^n <=> forall {x_n} subset E : exists {x_n_k} :
+  Множество $E$ является компактным в $RR^n <=> forall seq(x) subset E : exists seq(idx: k, x_n) :
   exists lim_(k -> oo) x_n_k = x in E$
 ]
 

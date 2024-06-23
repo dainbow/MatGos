@@ -40,7 +40,7 @@
 #proof[
   Заметим, что $phi, psi$ удовлетворяют условиям теоремы Коши о среднем. Тогда
   #eq[
-    $exists xi_1 in (x_0, x) : space (phi(x) - underbrace(phi(x_0), 0)) / (psi(x) - underbrace(psi(x_0), 0)) = (phi'(xi_1)) / (psi'(xi_1)) = (phi'(xi_1) - underbrace(phi'(x_0), 0)) / (psi'(xi_1) - underbrace(psi'(x_0), 0)) = (phi''(xi_2)) / (psi''(xi_2)) = ... = (phi^((n + 1))(xi_(n + 1))) / (psi^((n + 1))(xi_(n + 1))) $
+    $exists xi_... in (x_0, x) : space (phi(x) - underbrace(phi(x_0), 0)) / (psi(x) - underbrace(psi(x_0), 0)) = (phi'(xi_1)) / (psi'(xi_1)) = (phi'(xi_1) - underbrace(phi'(x_0), 0)) / (psi'(xi_1) - underbrace(psi'(x_0), 0)) = (phi''(xi_2)) / (psi''(xi_2)) = ... = (phi^((n + 1))(xi_(n + 1))) / (psi^((n + 1))(xi_(n + 1))) $
   ]
 ]
 
@@ -90,14 +90,14 @@
 
   Снова используем лемму об отношении, но для случая $n - 1$:
   #eq[
-    $phi(x) := f(x) - P_n(f, x) ; quad psi(x) = (x - x_0)^n$
+    $phi(x) := f(x) - P_n (f, x) ; quad psi(x) = (x - x_0)^n$
   ]
   Получим, что
   #eq[
-    $exists xi in (x_0, x) : space (f(x) - P_n(f, x)) / (x - x_0)^n = (f^((n - 1))(xi) - P_n^((n - 1))(f, xi)) / (n! (xi - x_0))$
+    $exists xi in (x_0, x) : space (f(x) - P_n (f, x)) / (x - x_0)^n = (f^((n - 1))(xi) - P_n^((n - 1))(f, xi)) / (n! (xi - x_0))$
   ]
   Заметим, что при $x -> x_0 => xi -> x_0$:
   #eq[
-    $lim_(x -> x_0) (f(x) - P_n(f, x)) / (x - x_0)^n = lim_(xi -> x_0) (f^((n - 1))(xi) - P_n^((n - 1))(f, xi)) / (n! (xi - x_0)) = 1 / n! (f(x_0) - P_n (f, x_0))^((n)) = 0$
+    $lim_(x -> x_0) (f(x) - P_n (f, x)) / (x - x_0)^n = lim_(xi -> x_0) (f^((n - 1))(xi) - P_n^((n - 1))(f, xi)) / (n! (xi - x_0)) = 1 / n! (f(x_0) - P_n (f, x_0))^((n)) = 0$
   ]
 ]
