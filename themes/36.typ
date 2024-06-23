@@ -2,9 +2,39 @@
 = Интегральная формула Коши. Разложение функции регулярной в окрестности точки в ряд Тейлора.
 
 == Интегральная формула Коши.
-//TODO: Поправить названия теорем. Что такое формула и что такое теорема
-Пункт 1 в интегральной теореме Коши (???)
 
+#theorem[_Формула Коши для круга_
+  Пусть f голоморфна в D, $overline(O_rho(a)) in D$ тогда
+  #eq[$
+      f(z) = 1/(2 pi i) integral_(abs(zeta - a) = rho) (f(zeta)) / (zeta - z) d zeta
+    $]
+
+]
+
+#proof[
+  В силу $overline(O_rho(a)) in D => exists R > rho: space O_R(a) in D$.
+  Зафиксируем $z in O_rho(a)$
+
+  Рассмотрим следующую функцию
+  #eq[$
+      g(zeta) = cases((f(zeta) - f(z)) / (z - zeta) \, zeta != z, f'(z) \, z = zeta)
+    $]
+
+  Она удовлетворяет условиям усиленной Леммы Гурса, следовательно
+  #eq[$
+      0 = integral_(abs(zeta - a) = rho) g(zeta) d zeta = integral_(abs(zeta - a) = rho) (f(zeta)) / (zeta - z) d zeta - integral_(abs(zeta - a) = rho) (f(z)) / (zeta - z) d zeta = integral_(abs(zeta - a) = rho) (f(zeta)) / (zeta - z) d zeta - f(z) integral_(abs(zeta - a) = rho) d zeta / (zeta - z).
+    $]
+
+  Обозначим $G(z) = integral_(abs(zeta - a) = rho) d zeta / (zeta - z)$.
+
+  Она голоморфна в области как интеграл Коши. $G' = integral_(abs(zeta - a) = rho) (d zeta) / (zeta - z)^2 equiv 0$
+
+  Следовательно $G(z) = "const" = G(a) = 2 pi i$
+
+  Отсюда эелементарно получим требуемое.
+]
+
+#note[Фомулировку для более общего случая смотри в прошлом билете]
 == Разложение функции регулярной в окрестности точки в ряд Тейлора.
 
 #theorem[
