@@ -96,7 +96,7 @@
 #theorem(
   "Интегрирование равномерно сходящейся функциональной последовательности",
 )[
-  Если $forall n in NN : space f_n$ интегрируема по Риману на $[a, b]$ и $f_n arrows f$ на $[a, b]$,
+  Если $forall n in NN : space f_n$ интегрируемы по Риману на $[a, b]$ и $f_n arrows f$ на $[a, b]$,
   то $f$ интегрируема по Риману на $[a, b]$ и
   #eq[
     $integral_a^b f(x) dif x = lim_(n -> oo) integral_a^b f_n (x) dif x$
