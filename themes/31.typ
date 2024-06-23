@@ -115,7 +115,7 @@
   ]
   Проинтегрируем одно из подыинтегральных слагаемых по частям:
   #eq[
-    $integral_a^b (partial F(x, y, y')) / (partial y') eta' dif x = (partial F(x, y, y')) / (partial y')|_a^b - integral_a^b dif / (dif x) ((partial F(x, y, y')) / (partial y')) eta dif x$
+    $integral_a^b (partial F(x, y, y')) / (partial y') eta' dif x = (partial F(x, y, y')) / (partial y') eta|_a^b - integral_a^b dif / (dif x) ((partial F(x, y, y')) / (partial y')) eta dif x$
   ]
   Первое слагаемое равно нулю в силу ограничений на допустимое приращение $eta$.
   Тогда
