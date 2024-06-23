@@ -17,14 +17,14 @@
 ]
 
 #definition[
-  Функция $f: B_r(z_0) -> CC$ называется _дифференцируемой_ в $z_0$ если
+  Функция $f: B_r (z_0) -> CC$ называется _дифференцируемой_ в $z_0$ если
   #eq[
     $exists A in CC : f(z) = f(z_0) + A(z-z_0) + o(z-z_0)\, |z-z_0| -> 0$
   ]
 ]
 
 #theorem[
-  $f: B_r(z_0) -> CC$ дифференцируема тогда и только тогда когда
+  $f: B_r (z_0) -> CC$ дифференцируема тогда и только тогда когда
   + $u(x,y), v(x,y)$ дифференцируемы в $(x_0, y_0)$
   + Выполняются _условия Коши-Римана_:
 
@@ -46,7 +46,7 @@
   Обозначим $A = a + i b$ и распишем $Delta f$ по координатно.
 
   #eq[$
-      cases(Delta u = a Delta x - b Delta y + alpha_0(Delta x, Delta y)
+      cases(Delta u = a Delta x - b Delta y + alpha_0(Delta x, Delta y),
       Delta v = b Delta x + a Delta y + alpha_1(Delta x, Delta y))
     $]
 
