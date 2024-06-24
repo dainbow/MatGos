@@ -34,7 +34,7 @@
 
     )$
 
-    При этом $f'(z_0) = (partial u)/(partial x) (x_0, y_0) + i(partial v) /(partial x) (x_0, y_0)$
+    При этом $f'(z_0) = (partial u)/(partial x) (x_0, y_0) + i (partial v) /(partial x) (x_0, y_0)$
 ]
 
 #proof[
@@ -115,7 +115,7 @@
 
   Следовательно для достаточно больших n
   #eq[$
-      |I_n| = abs(integral_(Delta_n) f(z) d z) <= integral_(Delta_n) abs(f(z) - f(z_0) - f'(z_0)(z - z_0)) |d z| <= epsilon * (l / 2^n)^2
+      |I_n| = abs(integral_(Delta_n) f(z) d z) <= integral_(Delta_n) abs(f(z) - f(z_0) - f'(z_0)(z - z_0)) |d z| <= epsilon dot (l / 2^n)^2
     $]
 
   Где $l$ периметр $Delta$, и соответсвенно $l/2^n$ периметр $Delta_n$.
@@ -182,7 +182,7 @@
 
 #definition[
   Пусть $gamma$ кусочно гладкая кривая, $phi$ непрерывна на $gamma$. Тогда
-  инегралом Коши называется
+  интегралом Коши называется
   #eq[$F_n (z, phi) = integral_gamma phi(xi) / (xi - z)^n d xi $]
 ]
 

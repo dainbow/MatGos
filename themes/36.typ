@@ -4,7 +4,7 @@
 == Интегральная формула Коши.
 
 #theorem[_Формула Коши для круга_
-  Пусть f голоморфна в D, $overline(O_rho(a)) in D$ тогда
+  Пусть f голоморфна в D, $overline(O_rho (a)) in D$ тогда
   #eq[$
       f(z) = 1/(2 pi i) integral_(abs(zeta - a) = rho) (f(zeta)) / (zeta - z) d zeta
     $]

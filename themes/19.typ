@@ -38,7 +38,8 @@
   ]
   Раскроем $phi_x_0$ и $S(x_0)$ и будем доказывать лишь для
   #eq[
-    $lim_(n -> oo) integral_0^delta (f(x_0 + t) - f(x_0 + 0)) / t sin(n t) dif mu(t) = 0$
+    $\ 
+    lim_(n -> oo) integral_0^delta (f(x_0 + t) - f(x_0 + 0)) / t sin(n t) dif mu(t) = 0$
   ]
   А для слагаемого с минусами аналогично.
 
