@@ -5,7 +5,7 @@
 #theorem[
 
   Пусть $f$ голоморфна в кольце $ K = {z in CC | r < |z - a| < R }$. Тогда
-  #eq[$forall z in K: space f(z) = sum_(-infinity)(+infinity)c_n (z-a)^n$]
+  #eq[$forall z in K: space f(z) = sum_(n = -infinity)^(+infinity)c_n (z-a)^n$]
   где
   #eq[$c_n = 1 / (2 pi i) integral_(gamma_rho) (f(xi) d xi) / (xi - a)^(n+1)$]
 ]
