@@ -46,13 +46,16 @@
   Обозначим $A = a + i b$ и распишем $Delta f$ по координатно.
 
   #eq[$
-      cases(Delta u = a Delta x - b Delta y + alpha_0(Delta x, Delta y),
-      Delta v = b Delta x + a Delta y + alpha_1(Delta x, Delta y))
+      cases(
+        Delta u = a Delta x - b Delta y + alpha_0(Delta x, Delta y),
+        Delta v = b Delta x + a Delta y + alpha_1(Delta x, Delta y),
+
+      )
     $]
 
   Из того, что $alpha(Delta z) = o(Delta z)$ следует $alpha_1, alpha_2$ тожe $o(Delta x, Delta y)$
 
-  Отсюда по определию $u$, $v$ дифференцируемы. Причем $(partial u) / (partial x) = (partial v) / (partial y) = a, -(partial u) / (partial y) = (partial v) / (partial x) = b$
+  Отсюда по определению $u$, $v$ дифференцируемы. Причем $(partial u) / (partial x) = (partial v) / (partial y) = a, -(partial u) / (partial y) = (partial v) / (partial x) = b$
 
   ($<==$)
 
@@ -75,13 +78,19 @@
 
 #lemma[
   Пусть D область f голоморфна в ней. Тогда
-  + Если f полный диференциал $=> space forall gamma$ кусочно гладкая замкнутая $integral_gamma f d z = 0$
-  + Если интеграл по любой замкнутой ломанной 0, $=>$ f - полный диференциал
+  + Если $f$ полный диференциал $=> space forall gamma$ кусочно гладкая замкнутая $integral_gamma f d z = 0$
+  + Если интеграл по любой замкнутой ломанной 0 $=> f$ - полный диференциал
 ]
 
-#theorem[_Лемма Гурса_
+#theorem(
+  "Лемма Гурса",
+)[
+  Пусть $D$ область, $f$ голоморфна в ней.
 
-  Пусть $D$ область, $f$ голоморфна в ней. Тогда $forall "треугольника" Delta: overline(Delta) in D space integral_(partial Delta) f d z = 0$
+  Тогда
+  #eq[
+    $forall "треугольника" Delta: overline(Delta) in D space integral_(partial Delta) f d z = 0$
+  ]
 ]
 
 #proof[
@@ -94,7 +103,10 @@
 
   Заметим, что в силу компактности $exists z_0 = sect.big_0^oo overline(Delta_n)$.
 
-  В силу дифференцируемости $forall epsilon > 0 forall z in O_delta (z_0) space abs(f(z) - f(z_0) - f'(z_0)(z - z_0)) < epsilon (z-z_0)$.
+  В силу дифференцируемости
+  #eq[
+    $forall epsilon > 0 : forall z in O_delta (z_0) : space abs(f(z) - f(z_0) - f'(z_0)(z - z_0)) < epsilon (z-z_0)$
+  ]
 
   Заметим, что $-f(z_0) - f'(z_0)(z - z_0)$ это полный диференциал, тогда
   #eq[$
@@ -120,10 +132,12 @@
   Картиночки порисовать.
 ]
 
-#theorem[_Коши для выпуклой области_
-  Пусть $D$ выпуклая область, $f$ голоморфна в ней. Тогда $forall gamma$ - кусочно
-  гладкой замкнутой
-  $integral_gamma f d z = 0$.]
+#theorem("Коши для выпуклой области")[
+  Пусть $D$ выпуклая область, $f$ голоморфна в ней.
+
+  Тогда $forall gamma$ - кусочно гладкой замкнутой
+  $integral_gamma f d z = 0$.
+]
 #proof[
   Явно предъявим полный дифференциал $F(z) = integral_[a; z] f(zeta) d zeta$.
   #eq[$
@@ -137,20 +151,27 @@
 ]
 
 #definition[
-  Пусть $gamma$ - кусочно гладкая кривая в $D$ - области. Тогда _приращением аргумента функции вдоль кривой_ $Delta_gamma f$ называется
+  Пусть $gamma$ - кусочно гладкая кривая в $D$ - области.
+
+  Тогда _приращением аргумента функции вдоль кривой_ $Delta_gamma f$ называется
   $\Im integral_gamma (f'(z) d z) / f(z)$
 ]
 
 #definition[
   Пусть $gamma$ - кусочно гладкая замкнутая кривая в $CC$, $a in C without gamma$.
-  Тогда индксом $a$ относительно $gamma$ называется
+
+  Тогда _индексом $a$ относительно $gamma$_ называется
   #eq[$J_gamma (a) = (Delta_gamma (z-a)) / (2 pi )$]
 ]
 
 #definition[
-  Пусть $gamma$ - кусочно гладкая кривая лежит в области $D$. Тогда говорят что $gamma space ~ space 0 (mod D)$ _гомологично эквивалентна нулю_,
+  Пусть $gamma$ - кусочно гладкая кривая лежит в области $D$.
+
+  Тогда говорят что $gamma space ~ space 0 space (mod D)$ _гомологично эквивалентна нулю_,
   если
-  $forall a in CC without D space J_gamma(a) = 0$
+  #eq[
+    $forall a in CC without D :space J_gamma (a) = 0$
+  ]
 ]
 
 #definition[
@@ -162,35 +183,49 @@
 #definition[
   Пусть $gamma$ кусочно гладкая кривая, $phi$ непрерывна на $gamma$. Тогда
   инегралом Коши называется
-  #eq[$F_n(z, phi) = integral_gamma phi(xi) / (xi - z)^n d xi $]
+  #eq[$F_n (z, phi) = integral_gamma phi(xi) / (xi - z)^n d xi $]
 ]
 
 #proposition[Свойства интеграла Коши
   1. $F_n$ голоморфна в $CC without gamma$
-  2. $F_n'(z, phi) = n F_(n+1)(z, phi)$
+  2. $F'_n (z, phi) = n F_(n+1)(z, phi)$
 ]
 
-#lemma[ _Обшая теорема Коши_
+#lemma(
+  "Общая теорема Коши",
+)[
+  Пусть $D$ - область в $CC$, $f$ - голоморфна в $D$
 
-  Пусть $D$ - область в $CC$, $f$ - голоморфна в $D$ Тогда
+  Тогда
   1. #eq[$ g(xi, z) = cases((f(xi)-f(z)) / (xi - z) \, xi != z, (f'(z)) \, z = xi)$]
   непрерывна в $D times D$
   2. Для любой кусочно гладкой $gamma in D$
   #eq[$
       h(z) = integral_gamma g(xi, z) d xi
     $]
-  голоморфна в D ]
+  голоморфна в D
+]
 
-#theorem[_Лиувиля_
-  Пусть $f$ голоморфная в $CC$ и $exists M,m,R space forall z |z| > R: space |f(z)| < M z^m$,
+#theorem(
+  "Лиувиля",
+)[
+  Пусть $f$ голоморфная в $CC$ и
+  #eq[
+    $exists M,m,R : forall z, |z| > R: space |f(z)| < M z^m$,
+  ]
   тогда $f$ полином степени $m$. В частности, если $f$ ограничена, то она
-  константа.]
+  константа.
+]
 
-#theorem[ _Интегральная теорема + формула Коши_
-  Пусть $D$ - область в $CC$, $f$ - голоморфна в $D$. Пусть $Gamma$ - цикл в $D$,
-  причем $Gamma space ~ space 0 (mod D)$, тогда
-  1. (формула) $forall z D without Gamma: J_Gamma (z) f(z) 1 / (2 pi i ) = integral_Gamma (f(xi) d xi) / (xi - z)$
-  2. (теорема) $ integral_Gamma f(z) d z = 0$ ]
+#theorem(
+  "Интегральная теорема + формула Коши",
+)[
+  Пусть $D$ - область в $CC$, $f$ - голоморфна в $D$.
+
+  Пусть $Gamma$ - цикл в $D$, причем $Gamma space ~ space 0 space (mod D)$, тогда
+  1. (формула) $forall z in D without Gamma: J_Gamma (z) f(z) 1 / (2 pi i ) = integral_Gamma (f(xi) d xi) / (xi - z)$
+  2. (теорема) $ integral_Gamma f(z) d z = 0$
+]
 
 #proof[
   (Необязательно) Пусть $G = {z in CC without Gamma | J_Gamma (z) = 0}$ оно
@@ -227,7 +262,7 @@
       f(z) J_Gamma(z) = integral_Gamma (f(xi) d xi) / (xi - z)
     $]
 
-  (1 => 2)
+  (1 $=>$ 2)
 
   Применим 1 к $tilde(f)(z) = (z-a)(f(z))$, где $a in CC without Gamma$ (естественно
   в области определения f) Тогда
